@@ -1,0 +1,617 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+
+    <!-- sweet alert -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css"
+    />
+
+    <title></title>
+    <script>
+      document.onkeydown = function (e) {
+        if (event.keyCode == 123) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+          return false;
+        }
+      };
+
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+    </script>
+  </head>
+
+  <body oncontextmenu="return false">
+  <nav
+    class="navbar navbar-expand-lg fixed-top navbar-light"
+    style="background-color: #f03a55"
+  >
+    <div class="container">
+      <a class="navbar-brand text-white" href="index.html">หน้าหลัก</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="login.html" class="nav-link text-white">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container" style="margin-top: 70px;">
+    <div class="row">
+      <div class="col-12">
+        <div class="alert alert-info" role="alert">รายการอาหารแนะนำ</div>
+      </div>
+      
+<div class="container" style="margin-top: -2px;">
+  <div class="row">
+    <div class="col-12">
+      <button type="button" class="btn btn-danger">เนื้อวัว (Beef)</button>
+      <button type="button" class="btn btn-primary">เนื้อหมู (Pork)</button>
+      <button type="button" class="btn btn-success">อาหารทะเล (Seafood)</button>
+      <button type="button" class="btn btn-warning">ผักต่างๆ (Vegetables)</button>
+      <button type="button" class="btn btn-info">ขนมหวาน (Dessert)</button>
+    </div>
+  </div>
+
+  <!-- Add margin-top between the buttons and the food cards -->
+  <div class="row mt-2">
+    <div class="col-12 col-sm-3" style="margin-bottom: 10px">
+      <div class="card" style="width: 100%">
+        <div id="qrcode1" class="card-img-top"></div>
+        <img
+          src="https://www.sirinfarm.com/wp-content/uploads/2021/07/shutterstock_1669173181-1-scaled-1.jpg"
+          class="card-img-top"
+          alt="เนื้อริบอาย (Ribeye)"
+          style="height: 300px; object-fit: cover;"
+        />
+        <div class="card-body" style="line-height: 1.2;">
+          <p class="card-text text-center" style="margin-bottom: 5px;">
+            <b>เนื้อริบอาย(Ribeye)</b><br />
+          </p>
+          <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+        </div>
+      </div>
+    </div>
+  
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://wickensranch.com/cdn/shop/products/Filet-Steak.jpg"
+      class="card-img-top"
+      alt="เนื้อสันใน (Tenderloin)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>เนื้อสันใน(Tenderloin)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://cache-igetweb-v2.mt108.info/uploads/images-cache/13706/product/1c10aca910255202b0e00bc950bd884d_full.jpg"
+      class="card-img-top"
+      alt="เนื้อสันนอก(Sirloin)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>เนื้อสันนอก(Sirloin)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://cache-igetweb-v2.mt108.info/uploads/images-cache/13871/product/f4ad28c2c500809af6855ed38f93806c_full.png"
+      class="card-img-top"
+      alt="เนื้อสันคอ(Neck Chuck)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>เนื้อสันคอ(Neck Chuck)</b><br /></p>
+          <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://come.in.th/wp-content/uploads/2023/05/Brisket-Navel-End-Flat.png"
+      class="card-img-top"
+      alt="เสือร้องไห้(Brisket)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>เสือร้องไห้(Brisket)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://ungsriwong.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2015/09/13150022/Kyushu2014_1174.jpg"
+      class="card-img-top"
+      alt="ลิ้นวัว(Beef Tongue)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ลิ้นวัว(Beef Tongue)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://scontent-bkk1-1.xx.fbcdn.net/v/t39.30808-6/215914777_180360237395193_2325763852910527008_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=YruNnQhW5C4Q7kNvgHk_DdF&_nc_ht=scontent-bkk1-1.xx&_nc_gid=A9RnY-Rraw_ZWF3tODMg7fR&oh=00_AYDi8Jzt7OVAHgmvspix89k6kxR3hnhXRPXjWq7bRE6xOw&oe=66FD92C6"
+      class="card-img-top"
+      alt="ใบพาย(Paleron)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ใบพาย(Paleron)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://www.farm2fork.co.uk/wp-content/uploads/2016/05/Grass-Fed-Beef-Rump-Steak.jpg"
+      class="card-img-top"
+      alt="เนื้อส่วนสะโพก(Rump Steak)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>เนื้อส่วนสะโพก(Rump Steak)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-12">
+  <div class="alert alert-Danger" role="alert">เนื้อหมู(Pork)</div>
+  </div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/23/02/0211123/0211123_1.jpg"
+      class="card-img-top"
+      alt="สันคอหมู(Pork Collar)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body"  style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>สันคอหมู(Pork Collar)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://j-gourmet.com/pub/media/mf_webp/jpg/media/catalog/product/cache/811e1385c22bb21b8edf54c526cb38fd/l/i/line_album_npd_210910_2_2_1.webp"
+      class="card-img-top"
+      alt="สามชั้นหมู(Pork Belly)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body"  style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>สามชั้นหมู(Pork Belly)</b><br /></p>
+       <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://www.pitchameat.com/wp-content/uploads/2023/06/4.%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%AA%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%AD%E0%B8%81%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B9%87%E0%B8%81%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B8%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B9%89%E0%B8%99-1024x625.webp"
+      alt="สันนอกหมู(Pork Loin)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body"  style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>สันนอกหมู(Pork Loin)</b><br /></p>
+       <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://www.pitchameat.com/wp-content/uploads/2023/06/MainSite4MAY2023.jpg"
+      class="card-img-top"
+      alt="สะโพกหมู(Pork Leg)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>สะโพกหมู(Pork Leg)</b><br /></p>
+      <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+     
+<div class="col-12 col-sm-12">
+    <div class="alert alert-Danger" role="alert">อาหารทะเล(Seafood)</div>
+    </div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://image.bangkokbiznews.com/uploads/images/contents/w1024/2022/08/LXKW28qNrk8PxzF9Z0QF.webp?x-image-process=style/md-webp"
+      class="card-img-top"
+      alt="กุ้ง(Shrimp)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>กุ้ง(Shrimp)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://img.wongnai.com/p/1920x0/2020/06/09/bd7b393af24a436bb37e98c798bb47f0.jpg"
+      class="card-img-top"
+      alt="หอย(Shellfish)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>หอย(Shellfish)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://www.supa.co.th/wp-content/uploads/2019/12/5F2D12F0-7FAE-432E-AD4F-55BCEAE59EB0.jpeg"
+      class="card-img-top"
+      alt="เนื้อปู(Crab)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>เนื้อปู(Crab)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://img.kapook.com/u/patcharin/Food/Meat/Fish/sawai1.jpg"
+      class="card-img-top"
+      alt="เนื้อปลาดอรี่(Dory Fish)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>เนื้อปลาดอรี่(Dory Fish)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-12">
+    <div class="alert alert-Danger" role="alert">
+      ผักต่างๆ(Various vegetables)
+    </div>
+  </div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://t1.blockdit.com/photos/2021/04/606812cce868860c54e48b8f_800x0xcover_m9BRDC5Y.jpg"
+      class="card-img-top"
+      alt="ผักบุ้ง(Water spinach)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ผักบุ้ง(Water spinach)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1522147053/attached_image_th/%25e0%25b8%259c%25e0%25b8%25b1%25e0%25b8%2581%25e0%25b8%2581%25e0%25b8%25b2%25e0%25b8%2594%25e0%25b8%2582%25e0%25b8%25b2%25e0%25b8%25a7.jpg"
+      class="card-img-top"
+      alt="ผักกาด(lettuce)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ผักกาด(lettuce)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://inwiangvalley.com/wp-content/uploads/2020/09/58152894371dcda945054ec2bda72e4e.jpg"
+      class="card-img-top"
+      alt="ข้าวโพดอ่อน(Baby corn)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ข้าวโพดอ่อน(Baby corn)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://i0.wp.com/www.freshfoodsbkk.com/wp-content/uploads/2017/09/images-14.jpeg?fit=500%2C500&ssl=1"
+      class="card-img-top"
+      alt="เห็ด(Mushroom)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>เห็ด(Mushroom)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-12">
+    <div class="alert alert-Danger" role="alert">ขนมหวาน(Dessert)</div>
+  </div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://i.pinimg.com/originals/7f/28/24/7f28248a9012c6a6f709ba9aadf2d65a.jpg"
+      class="card-img-top"
+      alt="ไอศกรีม(Ice cream)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ไอศกรีม(Ice cream)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://scontent.fnak4-2.fna.fbcdn.net/v/t39.30808-6/454033549_809155364732673_222585814320938204_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_O44dT6hu1wQ7kNvgGx6eJA&_nc_ht=scontent.fnak4-2.fna&_nc_gid=A37F-wv5-V1RSsd2zDIWzi6&oh=00_AYBKw-fI0tfh92k1V7GWv9kjjmW1wxTCoz_oqmio523Imw&oe=66FD9AEF"
+      class="card-img-top"
+      alt="เค้ก(Cake)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>เค้ก(Cake)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://stu40542site.wordpress.com/wp-content/uploads/2016/11/cropped-e0b89ae0b8a3e0b8b2e0b8a7e0b899e0b8b5e0b98831.jpg"
+      alt="บราวนี่(Brownies)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>บราวนี่(Brownies)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://chefoldschool.com/wp-content/uploads/2020/05/%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%AD%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B1%E0%B8%99.jpg"
+      class="card-img-top"
+      alt="ขนมชั้น(Khanom Lay)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ขนมชั้น(Khanom Lay)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://i.ytimg.com/vi/rdIj6ncSxBw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAlUa6JUt5n409wHLvJDQDzJ2JaGw"
+      class="card-img-top"
+      alt="วุ้นมะพร้าว(Coconut jelly)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>วุ้นมะพร้าว(Coconut jelly)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://img.kapook.com/u/2019/wanwanat/waffle/toddy.jpg"
+      alt="ขนมตาล(Sugar Candy)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ขนมตาล(Sugar Candy)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://scontent.fnak4-2.fna.fbcdn.net/v/t1.6435-9/56331087_572943589877615_6450694888911536128_n.jpg?stp=dst-jpg_s720x720&_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=hhqkZ57G56sQ7kNvgF7TEX1&_nc_ht=scontent.fnak4-2.fna&oh=00_AYAa5t82Xy7QR0vayO4qbNbKF8Fqsp3z6GYjtUTM4Bqg7A&oe=671F6024"
+      class="card-img-top"
+      alt="ลอดช่อง(Lod Chong)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ลอดช่อง(Lod Chong)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-3" style="margin-bottom: 10px">
+  <div class="card" style="width: 100%">
+    <div id="qrcode1" class="card-img-top"></div>
+    <img
+      src="https://i.pinimg.com/474x/c3/5d/bc/c35dbc72bec927724fbe7b3e72091c46.jpg"
+      class="card-img-top"
+      alt="ขนมเปียกปูน(Rhombic)"
+      style="height: 300px; object-fit: cover;"
+    />
+    <div class="card-body" style="line-height: 1.2;">
+      <p class="card-text text-center" style="margin-bottom: 5px;">
+        <b>ขนมเปียกปูน(Rhombic)</b><br /></p>
+        <p class="card-text text-center"><b>ราคา: 250 บาท</b></p>
+    </div>
+  </div>
+</div>
+     
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/d)ist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
